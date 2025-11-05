@@ -1,0 +1,1370 @@
+/* === Базовые стили === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  background: #fafafa;
+  color: #333;
+}
+/*Multi steps*/
+
+
+.multi-step-form {
+  background-color: #fff8f0;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 30px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.multi-step-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+.multi-step-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.multi-step-form .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.multi-step-form button {
+  padding: 8px 20px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.multi-step-form button:hover {
+  background-color: #ff3b2e;
+}
+
+
+
+
+/*Restaurant info changes*/
+.restaurant-info {
+  text-align: center;
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 700px;
+  background: #fff5f5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.restaurant-info p{
+  padding: 0 10px
+}
+
+
+#restaurantText {
+  transition: color 0.5s, opacity 0.5s;
+  opacity: 1;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+
+#infoBtn {
+  margin-top: 15px;
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  border: none;
+   border-radius: 10px;
+  background-color: #b22222;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+
+#infoBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+ 
+}
+
+
+
+
+/*==Likes==*/
+.like-box {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+
+.heart {
+  cursor: pointer;
+  font-size: 24px;
+  transition: color 0.3s;
+  color: #aaa;
+}
+
+
+.heart.liked {
+  color: red;
+}
+
+
+
+
+
+
+
+
+/*==datetime==*/
+.datetime {
+  font-size: 0.9rem;
+  color: #555;
+  background: #fff0f0;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+
+
+
+.datetime {
+  font-size: 14px;
+  color: #444;
+  margin-left: 15px;
+}
+
+/* ===========================
+   POPUP STYLING
+=========================== */
+/* Popup styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+
+.popup-content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  width: 300px;
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.error-box {
+  color: red;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+
+.bg-btn, .open-popup {
+  margin: 15px;
+  padding: 10px 20px;
+  background-color: #e8b4b8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.popup {
+  display: none; /* скрыта по умолчанию */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* затемнённый фон */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px 40px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  position: relative;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.popup-content h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.popup-content input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.popup-content input:focus {
+  outline: none;
+  border-color: #8B0000;
+  box-shadow: 0 0 8px rgba(139,0,0,0.3);
+}
+
+.popup-content button[type="submit"] {
+  background-color: #8B0000;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup-content button[type="submit"]:hover {
+  background-color: #b22222;
+}
+
+.popup-content .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.popup-content .close:hover {
+  color: #8B0000;
+}
+
+.error-box {
+  color: #b22222;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  min-height: 20px;
+  text-align: left;
+}
+
+
+
+
+/*===Media queries===*/
+
+/* --- Телефоны (до 600px) --- */
+
+@media (max-width: 600px) {
+  .story {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .story img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .story div {
+    width: 100%;
+  }
+
+  .story div h2 {
+    font-size: 1.4rem;
+  }
+
+  .story div p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  body.home-page header.header nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  body.home-page .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  body.home-page .hero-right img {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  body.home-page .stats-section .stats-grid,
+  body.home-page .chefs .chef-grid,
+  body.home-page .new-dishes .dish-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  body.home-page aside.sidebar {
+    display: none;
+  }
+
+  body.home-page main {
+    padding: 10px;
+  }
+
+  body.home-page button, 
+  body.home-page .bg-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+
+/* --- Планшеты (до 992px) --- */
+@media (max-width: 992px) {
+  .story {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story img {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .story div {
+    width: 100%;
+  }
+  body.home-page header.header nav ul {
+    gap: 15px;
+  }
+
+  body.home-page .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  body.home-page .hero-left {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  body.home-page .dish-grid,
+  body.home-page .chefs .chef-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  body.home-page aside.sidebar {
+    width: 100%;
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  body.home-page main {
+    padding: 15px;
+  }
+}
+
+/* --- Десктопы (1200px и выше) --- */
+@media (min-width: 1200px) {
+  .story {
+    gap: 60px;
+    padding: 60px 80px;
+  }
+
+  .story img {
+    width: 40%;
+  }
+
+  .story div {
+    width: 45%;
+  }
+
+  .story div h2 {
+    font-size: 2rem;
+  }
+
+  .story div p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  body.home-page .dish-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  body.home-page .chefs .chef-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  body.home-page .hero {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  body.home-page main {
+    padding: 30px;
+  }
+}
+
+
+
+/* === Основной контейнер === */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  gap: 20px;
+  padding: 20px;
+}
+
+
+/* === Header === */
+.header {
+  grid-area: header;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* === Sidebar === */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 80px;
+}
+
+
+.sidebar h3 {
+  font-size: 1.5rem;
+  color: #b22222;
+  margin-bottom: 20px;
+}
+
+
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+
+.sidebar ul li a:hover {
+  color: #b22222;
+}
+
+
+/* === Navigation === */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #b22222;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #b22222;
+}
+
+
+/* === Main === */
+.main-container {
+  grid-area: main;
+  background-color: #eee;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* === Hero Section === */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  gap: 40px;
+  background: linear-gradient(135deg, #fff, #fff5f5);
+  border-bottom: 4px solid #b22222;
+}
+
+
+.hero-left h1 {
+  font-size: 2.5rem;
+  color: #b22222;
+}
+
+
+.hero-left p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+
+.hero-bowl-wrapper {
+  max-width: 350px;
+  animation: spin 12s linear infinite;
+  }
+
+
+.hero-bowl {
+  width: 100%;
+  height: auto;
+}
+
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* === Story Section === */
+.story {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #fff5f5, #ffeaea); /* светлый градиент */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.story img {
+  width: 45%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.story div {
+  width: 45%;
+  color: #333; /* тёмный текст для светлого фона */
+}
+
+
+
+.story h2 {
+  color: #b22222;
+  margin-bottom: 15px;
+}
+
+
+/* === Season Specials === */
+.new-dishes h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #b22222;
+  margin-bottom: 30px;
+  }
+
+
+.dish-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px 10%;
+}
+
+
+.dish-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.dish-card:hover {
+  transform: translateY(-6px);
+}
+
+
+.dish-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+
+.dish-card:hover img {
+  transform: scale(1.05);
+}
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+ /*background: rgba(219, 127, 127, 0.6);*/
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+
+.dish-card:hover .overlay {
+  opacity: 1;
+}
+
+
+/* === Chefs === */
+.chefs h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #b22222;
+  margin-bottom: 30px;
+}
+
+
+.chef-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 10%;
+}
+
+
+.chef-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.chef-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+.chef-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 4px solid #b22222;
+}
+/* === Scroll Progress Bar === */
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 0%;
+  background: linear-gradient(90deg, #ff4d4d, #b22222);
+  box-shadow: 0 2px 5px rgba(255, 77, 77, 0.4);
+  z-index: 9999;
+  transition: width 0.2s ease-out;
+}
+
+/* === Stats Counter === */
+.stats-section {
+  text-align: center;
+  background: #fff5f5;
+  padding: 50px 0;
+  border-top: 3px solid #b22222;
+  border-bottom: 3px solid #ff6f61;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.stats-section h2 {
+  color: #b22222;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.stat {
+  font-size: 20px;
+  color: #333;
+}
+
+.stat .count {
+  display: block;
+  font-size: 46px;
+  font-weight: bold;
+  color: #b22222;
+  text-shadow: 0 2px 4px rgba(178,34,34,0.2);
+}
+
+/* === Loading Spinner === */
+.loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #b22222;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin-right: 8px;
+  animation: spin 0.8s linear infinite;
+  vertical-align: middle;
+}
+
+button.loading {
+  background-color: #e8b4b8 !important;
+  cursor: not-allowed;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* === Scroll Progress Bar === */
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 0%;
+  background: linear-gradient(90deg, #ff4d4d, #b22222);
+  box-shadow: 0 2px 5px rgba(255, 77, 77, 0.4);
+  z-index: 9999;
+  transition: width 0.2s ease-out;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 36px;
+  color: #b22222;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.stat-item p {
+  color: #555;
+  font-size: 16px;
+}
+
+
+/* === Stats Section === */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 50px 0;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 40px;
+  color: #b22222;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.stat-item p {
+  color: #555;
+  font-size: 16px;
+}
+
+/*  Spinner style */
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #ff4b4b;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Toast notification style */
+#toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #333;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s, bottom 0.5s;
+  font-size: 15px;
+  z-index: 9999;
+}
+
+#toast.show {
+  opacity: 1;
+  bottom: 50px;
+}
+/* Restaurant Gallery */
+.restaurant-gallery {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #fff8f8;
+}
+
+.restaurant-gallery h2 {
+  color: #b22222;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-container img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.promo-sidebar {
+  background: #fff0f3;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.promo-sidebar h3 {
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.promo-item {
+  background: #ffe4e9;
+  border-radius: 10px;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+.promo-code {
+  font-weight: bold;
+  color: #e63946;
+}
+
+.copy-btn {
+  display: inline-block;
+  margin-top: 6px;
+  background: linear-gradient(135deg, #ff4d4d, #b22222);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(255, 77, 77, 0.3);
+}
+
+.copy-btn:hover {
+  background: linear-gradient(135deg, #ff6666, #ff1a1a);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(255, 77, 77, 0.4);
+}
+
+.copy-btn:active {
+  transform: scale(0.97);
+}
+
+/* Когда код скопирован */
+.copy-btn.copied {
+  background: linear-gradient(135deg, #28a745, #218838);
+  box-shadow: 0 4px 10px rgba(40, 167, 69, 0.4);
+}
+
+.copy-btn.copied:hover {
+  background: linear-gradient(135deg, #34c759, #2e8b57);
+}
+
+
+#copyTooltip {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 25px;
+  background: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.lazy {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.lazy[src] {
+  opacity: 1;
+}
+
+/* === Footer === */
+.footer {
+  grid-area: footer;
+  background: #b22222;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+}
+/* === 🌙 Глобальная тёмная тема для home page === 
+body.night-mode.home-page {
+  background-color: #1e1e1e; /* общий тёмный фон 
+  color: #ffc0cb; /* светло-розовый текст *
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Внутренние блоки и секции *
+body.night-mode.home-page * {
+  background-color: rgba(40, 40, 40, 0.85); /* мягкий тёмно-серый фон *
+  color: #bbbbbb !important; /* светло-серый текст для читаемости *
+  border-color: #444 !important;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+/* Hero и Hero Bowl *
+body.night-mode.home-page .hero,
+body.night-mode.home-page .hero * {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #bbbbbb !important; /* текст серый *
+}
+*/
+
+
+
+/* === 🌙 Global Dark Mode === */
+body.night-mode.home-page {
+  background-color: #1e1e1e; /* основной серый фон страницы */
+  color: #ffffff; /* основной текст белый */
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Все блоки: светло-розовые с объёмом */
+body.night-mode.home-page .multi-step-form,
+body.night-mode.home-page .story,
+body.night-mode.home-page .restaurant-info,
+body.night-mode.home-page .restaurant-gallery,
+body.night-mode.home-page .stats-section,
+body.night-mode.home-page .new-dishes,
+body.night-mode.home-page .chefs {
+  background-color: #1e1e1e; /* светло-розовый */
+  border: 1px solid #444; /* серый для объёма */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* лёгкий объём */
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  color: #ffffff;
+}
+
+/* Hero и Hero Bowl остаются чистыми */
+body.night-mode.home-page .hero,
+body.night-mode.home-page .hero * {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+
+/* Header */
+body.night-mode.home-page header.header {
+  background-color: #444;
+}
+
+/* Navbar: активная страница  */
+body.night-mode.home-page nav ul li a {
+  color: #fff;
+}
+
+/* Dark mode для навигации */
+body.night-mode.home-page header.header nav {
+  background-color: #444 !important; /* тёмно-серый фон */
+  transition: background-color 0.4s ease;
+}
+
+body.night-mode.home-page nav ul li a.active {
+  color: #b22222 !important;
+}
+
+/* Sidebar */
+body.night-mode.home-page aside.sidebar {
+  background-color: #444; 
+  color: #b22222;
+}
+
+/* Sidebar Navigation Title */
+body.night-mode.home-page aside.sidebar h3 {
+  color: #ffc0cb; /* Navigation заголовок */
+}
+
+/* Sidebar Links */
+body.night-mode.home-page aside.sidebar ul li a {
+  color: #ffffff;
+}
+
+/* === Main Section Dark Mode === */
+body.night-mode.home-page main {
+  background-color: #555; /* основной серый фон для main */
+  color: #fff; /* текст белый по умолчанию */
+  padding: 20px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Чтобы все секции внутри main имели контраст */
+body.night-mode.home-page main section {
+  background-color: #ffebf0; /* светло-розовый для блоков */
+  border: 1px solid #555; /* тёмно-серые границы для объёма */
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Текст внутри секций */
+body.night-mode.home-page main section h2,
+body.night-mode.home-page main section p {
+  color: #fff; /* белый текст */
+}
+
+/* Hero Text */
+body.night-mode.home-page .hero h1,
+body.night-mode.home-page .hero p {
+  color: #b22222 !important;
+}
+
+/* Buttons */
+body.night-mode.home-page button,
+body.night-mode.home-page .bg-btn,
+body.night-mode.home-page .open-popup,
+body.night-mode.home-page .copy-btn {
+  background-color: #2b1e24 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffc0cb !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === Fun Facts Block === */
+body.night-mode.home-page .restaurant-info {
+  background-color: #444; 
+  border: 1px solid #555; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* === Chef Cards === */
+body.night-mode.home-page .chefs .chef-card {
+  background-color: #444;
+  border: 1px solid #555;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+body.night-mode.home-page .chefs .chef-card img {
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* === Dish Cards (Season Specials) === */
+body.night-mode.home-page .dish-card {
+  background-color: #444;
+  border: 1px solid #555;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* === Stats Grid Blocks === */
+body.night-mode.home-page .stats-section .stats-grid .stat {
+  background-color: #444;
+  border: 1px solid #555;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover Buttons */
+body.night-mode.home-page button:hover,
+body.night-mode.home-page .copy-btn:hover {
+  background-color: #ffc0cb !important;
+  color: #1e1e1e !important;
+}
+
+/* Inputs, textarea, select */
+body.night-mode.home-page input,
+body.night-mode.home-page textarea,
+body.night-mode.home-page select {
+  background-color: #444 !important;
+  color: #ffffff !important;
+  border: 1px solid #555 !important;
+}
+
+/* Footer */
+body.night-mode.home-page footer.footer {
+  background-color: #2b1e24;
+  color: #ffffff;
+  border-top: 1px solid #555;
+}
+
+/* Popup Subscription */
+body.night-mode.home-page .popup .popup-content {
+  background-color: rgba(255,192,203,0.15);
+  color: #ffffff;
+  border: 1px solid #555;
+}
+
+/* === Our Story Block Dark Mode === */
+body.night-mode.home-page .story {
+  background-color: #444 !important;
+  border: 1px solid #555 !important; 
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+  padding: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  gap: 20px;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+  color: #fff !important;
+}
+
+/* Заголовок и параграф внутри блока */
+body.night-mode.home-page .story h2,
+body.night-mode.home-page .story p {
+  color: #fff !important;
+}
+
+/* Изображение */
+body.night-mode.home-page .story img {
+  filter: brightness(1) contrast(1.05);
+  border-radius: 8px;
+}
+
+/* Theme button hover */
+body.night-mode.home-page #theme-btn:hover {
+  background-color: #ffc0cb;
+  color: #1e1e1e;
+}
+
+/* === Multi-step Form === */
+body.night-mode.home-page .multi-step-form .step {
+  background-color: #555;
+  border: 1px solid #4d4545;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  padding: 25px;
+  margin-bottom: 25px;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Заголовки и текст */
+body.night-mode.home-page .multi-step-form .step h2,
+body.night-mode.home-page .multi-step-form .step p,
+body.night-mode.home-page .multi-step-form .step input,
+body.night-mode.home-page .multi-step-form .step textarea {
+  color: #fff;
+}
+
+/* Кнопки внутри формы */
+body.night-mode.home-page .multi-step-form .step button {
+  background-color: #fff;
+  color: #1e1e1e;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.night-mode.home-page .multi-step-form .step button:hover {
+  background-color: #ff99aa;
+  color: #fff;
+}
+
+/* === Sidebar Toggle Button (Base Style) === */
+.sidebar .mode-toggle {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  padding: 12px 18px;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.35s ease;
+  background: linear-gradient(145deg, #ffe6eb, #ffc0cb); /* розоватый градиент */
+  color: #3b1f2b;
+  font-weight: 600;
+  box-shadow: 0 3px 6px rgba(255, 182, 193, 0.5);
+}
+
+/* Hover — мягкий розовый блеск */
+.sidebar .mode-toggle:hover {
+  background: linear-gradient(145deg, #ffc0cb, #ffb6c1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.6);
+}
+
+/* === Night Mode Version === */
+body.night-mode .sidebar .mode-toggle {
+  background: linear-gradient(145deg, #2b1e24, #3a252b);
+  color: #ffb6c1;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.6),
+              inset 0 0 8px rgba(255, 182, 193, 0.3);
+  text-shadow: 0 0 4px rgba(255, 192, 203, 0.6);
+}
+
+/* Hover — неоновое свечение */
+body.night-mode .sidebar .mode-toggle:hover {
+  background: linear-gradient(145deg, #3a252b, #4a3038);
+  box-shadow: 0 0 16px rgba(255, 192, 203, 0.9),
+              inset 0 0 10px rgba(255, 182, 193, 0.4);
+  transform: translateY(-2px);
+}
+
+
+
