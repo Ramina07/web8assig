@@ -892,7 +892,7 @@ body.night-mode.home-page .hero * {
 
 /* Внешний блок hero */
 body.night-mode.menu-page .menu-hero {
-  background-color: #fff; /* фон самого блока */
+  background-color: #817a7a; /* фон самого блока */
   color: #ffffff;
 }
 
@@ -904,6 +904,12 @@ body.night-mode.menu-page .menu-hero-right {
   box-shadow: none;
   color: #ffffff;
   padding: 20px;
+}
+body.night-mode.menu-page .menu-hero h1,
+body.night-mode.menu-page .menu-hero h2,
+body.night-mode.menu-page .menu-hero p,
+body.night-mode.menu-page .menu-hero span {
+  color: #ffffff !important;
 }
 
 
