@@ -7,18 +7,30 @@
   <title>Sakura Bowl - Home</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="ModeSwitch.js"></script>
+  <script src="auth.js"></script>
 
   <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="user.css">
+  
 </head>
 
-
-
-
-
-
-
-
 <body class="home-page">
+  <!-- Overlay для блокировки сайта -->
+  <div id="siteBlocker">
+  <div class="auth-gate">
+    <h2 id="authTitle">Welcome!</h2>
+    <form id="siteAuthForm">
+      <input type="text" id="authName" placeholder="Name" required>
+      <input type="email" id="authEmail" placeholder="Email" required>
+      <input type="password" id="authPassword" placeholder="Password" required>
+      <div id="errorBox" class="error-box"></div>
+      <button type="submit" id="authSubmitBtn">Sign Up</button>
+    </form>
+    <p id="switchAuth">Already have an account? <span id="toggleAuth">Log In</span></p>
+  </div>
+</div>
+
+
   <div id="progressBar"></div>
 
   <div class="container">
@@ -34,9 +46,20 @@
           <li><a href="indexr.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div class="button-group">
         <button id="openPopup" class="open-popup">Subscribe</button>
         <div class="datetime" id="datetime"></div>
         <button id="changeBg" class="bg-btn">Change Background</button>
+        <button id="modeToggle" class="mode-toggle"> 🌙</button>
+        </div>
+        
+        <div id="userProfile" class="user-profile" style="display:none;">
+          <img src="images/user-icon.png" alt="User Icon" class="profile-icon">
+          <span id="userName"></span>
+          <button id="logoutBtn">Log Out</button>
+        </div>
+      
+
       </nav>
     </header>
 
@@ -67,7 +90,7 @@
         <div id="toast"></div>
       </section>
       
-      <button id="modeToggle" class="mode-toggle"> Switch to Night Mode 🌙</button>
+      
 
 
 
